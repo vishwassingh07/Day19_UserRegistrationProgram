@@ -24,6 +24,21 @@ namespace UserRegistrationProgram
                 Console.WriteLine("Invalid passord");
             }
         }
+        public Regex Password_Regex2 = new Regex("^[A-Z]{1,8}[a-z0-9]{7,}$");
+        public void ValidatePassword2()
+        {
+            Console.Write("Enter the password : ");
+            string password2 = Console.ReadLine();
+
+            if (Password_Regex2.IsMatch(password2))
+            {
+                Console.WriteLine("The password is valid ");
+            }
+            else
+            {
+                Console.WriteLine("Invalid passord");
+            }
+        }
         
     }
 }
